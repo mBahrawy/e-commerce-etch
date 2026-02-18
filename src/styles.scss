@@ -1,1 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+@forward "assets/scss/index.scss";
+
+@import 'tailwindcss';
+@import 'tailwindcss/utilities';
