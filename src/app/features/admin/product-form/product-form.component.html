@@ -1,0 +1,73 @@
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4">
+  <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
+    <!-- Header -->
+    <div class="p-6 border-b border-gray-100">
+      <h2 class="text-xl font-bold text-gray-900">
+        {{ (product() ? 'admin.edit_product' : 'admin.add_product') | translate }}
+      </h2>
+    </div>
+
+    <!-- Form -->
+    <form (ngSubmit)="onSubmit()" class="p-6 space-y-5">
+      <!-- Title -->
+      <div class="space-y-1.5">
+        <label class="block text-sm font-medium text-gray-700">{{ 'admin.form.title' | translate }}</label>
+        <input type="text" [(ngModel)]="formData.title" name="title" required
+          class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all duration-200" />
+      </div>
+
+      <!-- Price -->
+      <div class="space-y-1.5">
+        <label class="block text-sm font-medium text-gray-700">{{ 'admin.form.price' | translate }}</label>
+        <input type="number" [(ngModel)]="formData.price" name="price" required min="0" step="0.01"
+          class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all duration-200" />
+      </div>
+
+      <!-- Category -->
+      <div class="space-y-1.5">
+        <label class="block text-sm font-medium text-gray-700">{{ 'admin.form.category' | translate }}</label>
+        <select [(ngModel)]="formData.category" name="category" required
+          class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all duration-200 bg-white">
+          @for (cat of categories(); track cat) {
+            <option [value]="cat">{{ cat }}</option>
+          }
+        </select>
+      </div>
+
+      <!-- Description -->
+      <div class="space-y-1.5">
+        <label class="block text-sm font-medium text-gray-700">{{ 'admin.form.description' | translate }}</label>
+        <textarea [(ngModel)]="formData.description" name="description" required rows="3"
+          class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all duration-200 resize-none"></textarea>
+      </div>
+
+      <!-- Image URL -->
+      <div class="space-y-1.5">
+        <label class="block text-sm font-medium text-gray-700">{{ 'admin.form.image_url' | translate }}</label>
+        <input type="url" [(ngModel)]="formData.image" name="image" required
+          class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all duration-200" />
+      </div>
+
+      <!-- Image Preview -->
+      @if (formData.image) {
+        <div class="flex justify-center">
+          <img [src]="formData.image" alt="Preview" class="w-24 h-24 object-contain rounded-lg border border-gray-100 p-1" />
+        </div>
+      }
+
+      <!-- Actions -->
+      <div class="flex gap-3 pt-2">
+        <button type="button" (click)="cancel.emit()"
+          class="flex-1 py-2.5 rounded-xl border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors">
+          {{ 'common.cancel' | translate }}
+        </button>
+        <button type="submit"
+          class="flex-1 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-medium shadow-lg shadow-purple-200 transition-all duration-200">
+          {{ 'common.save' | translate }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+

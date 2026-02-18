@@ -1,0 +1,63 @@
+{
+  "login": {
+    "title": "مرحباً بعودتك",
+    "subtitle": "سجّل الدخول للوصول إلى حسابك",
+    "username": "اسم المستخدم",
+    "password": "كلمة المرور",
+    "username_placeholder": "أدخل اسم المستخدم",
+    "password_placeholder": "أدخل كلمة المرور",
+    "submit": "تسجيل الدخول",
+    "demo_credentials": "الوصول السريع بحسابات تجريبية",
+    "error": "اسم المستخدم أو كلمة المرور غير صحيحة",
+    "fill_all_fields": "يرجى تعبئة جميع الحقول"
+  },
+  "navbar": {
+    "logout": "تسجيل الخروج"
+  },
+  "admin": {
+    "title": "إدارة المنتجات",
+    "subtitle": "إدارة منتجات متجرك",
+    "add_product": "إضافة منتج",
+    "edit_product": "تعديل المنتج",
+    "search_placeholder": "ابحث عن المنتجات بالاسم أو الفئة أو السعر...",
+    "no_products": "لم يتم العثور على منتجات",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "delete_confirm_title": "حذف المنتج",
+    "delete_confirm_message": "هل أنت متأكد من حذف هذا المنتج؟ لا يمكن التراجع عن هذا الإجراء.",
+    "table": {
+      "image": "الصورة",
+      "title": "العنوان",
+      "category": "الفئة",
+      "price": "السعر",
+      "rating": "التقييم",
+      "actions": "الإجراءات"
+    },
+    "form": {
+      "title": "العنوان",
+      "price": "السعر",
+      "category": "الفئة",
+      "description": "الوصف",
+      "image_url": "رابط الصورة"
+    }
+  },
+  "user": {
+    "title": "اكتشف المنتجات",
+    "subtitle": "تصفح مجموعتنا المختارة من المنتجات عالية الجودة",
+    "all_categories": "الكل",
+    "products_found": "منتجات موجودة",
+    "view_details": "عرض التفاصيل",
+    "back_to_products": "العودة للمنتجات",
+    "no_products": "لم يتم العثور على منتجات في هذه الفئة",
+    "reviews": "تقييمات",
+    "description": "الوصف",
+    "product_id": "رقم المنتج",
+    "category_label": "الفئة"
+  },
+  "common": {
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "delete": "حذف",
+    "loading": "جاري التحميل..."
+  }
+}

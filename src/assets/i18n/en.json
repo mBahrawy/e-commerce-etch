@@ -1,0 +1,63 @@
+{
+  "login": {
+    "title": "Welcome Back",
+    "subtitle": "Sign in to access your account",
+    "username": "Username",
+    "password": "Password",
+    "username_placeholder": "Enter your username",
+    "password_placeholder": "Enter your password",
+    "submit": "Sign In",
+    "demo_credentials": "Quick access with demo accounts",
+    "error": "Invalid username or password",
+    "fill_all_fields": "Please fill in all fields"
+  },
+  "navbar": {
+    "logout": "Logout"
+  },
+  "admin": {
+    "title": "Product Management",
+    "subtitle": "Manage your store products",
+    "add_product": "Add Product",
+    "edit_product": "Edit Product",
+    "search_placeholder": "Search products by name, category, or price...",
+    "no_products": "No products found",
+    "edit": "Edit",
+    "delete": "Delete",
+    "delete_confirm_title": "Delete Product",
+    "delete_confirm_message": "Are you sure you want to delete this product? This action cannot be undone.",
+    "table": {
+      "image": "Image",
+      "title": "Title",
+      "category": "Category",
+      "price": "Price",
+      "rating": "Rating",
+      "actions": "Actions"
+    },
+    "form": {
+      "title": "Title",
+      "price": "Price",
+      "category": "Category",
+      "description": "Description",
+      "image_url": "Image URL"
+    }
+  },
+  "user": {
+    "title": "Discover Products",
+    "subtitle": "Browse our curated collection of quality products",
+    "all_categories": "All",
+    "products_found": "products found",
+    "view_details": "View Details",
+    "back_to_products": "Back to Products",
+    "no_products": "No products found in this category",
+    "reviews": "reviews",
+    "description": "Description",
+    "product_id": "Product ID",
+    "category_label": "Category"
+  },
+  "common": {
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "loading": "Loading..."
+  }
+}
