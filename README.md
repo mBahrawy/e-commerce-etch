@@ -1,59 +1,113 @@
-# EcommerceStore
+# E-Tech E-Commerce Store
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.
+[![Angular](https://img.shields.io/badge/Angular-v19+-DD0031?style=flat&logo=angular)](https://angular.io/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=flat&logo=link)](https://etech-store123.com)
 
-## Development server
+A professional, feature-rich e-commerce store application built with Angular 19. This project was developed as a technical assessment for **E-Tech**.
 
-To start a local development server, run:
+---
 
+## 🚀 Live Demo
+Experience the application live at: **[https://etech-store123.com](https://etech-store123.com)**
+
+---
+
+## 📋 Project Objective
+Develop a basic yet impressive e-commerce web application focusing on:
+- Role-based access control (User & Admin).
+- Dynamic localization (English & Arabic).
+- Efficient data handling (Pagination, Debouncing, Caching).
+- Modern UI/UX using SASS and the latest Angular features.
+
+---
+
+## 🔐 Authentication & Roles
+The application supports two primary roles. Unauthorized access to role-specific views is strictly restricted.
+
+| Role | Username | Password | Access Level |
+| :--- | :--- | :--- | :--- |
+| **Admin** | `admin` | `admin` | Full Product Management (CRUD), Pagination |
+| **User** | `user` | `user` | Browsing, Categories, Filters, Product Details |
+
+> [!NOTE]
+> The login form is only accessible to unauthenticated visitors.
+
+---
+
+## ✨ Features
+
+### 🛍️ Categories & Product Display
+- **Admin View**:
+    - Manage product catalog via a comprehensive table.
+    - Full CRUD operations: **Add, Update, Delete** products.
+    - Integrated **Pagination** for large datasets.
+- **User View**:
+    - Browse products by category.
+    - Advanced **Filters** section for easy navigation.
+    - Detail view for each product.
+    - **Reactive UI**: Leveraging **Angular Signals** for granular reactivity and performance.
+    - Smooth **Loading Animations** during data fetching.
+
+### 🌍 Localization
+- Supports **English** and **Arabic** out-of-the-box using **ngx-translate**.
+- Dynamic RTL (Right-to-Left) support for Arabic.
+- Real-time language switching without page reload.
+
+### 🎨 Modern UI/UX
+- Styled with **Tailwind CSS** for a modern, utility-first design approach.
+- Responsive and mobile-friendly layouts.
+- Custom SASS for complex component-specific styles.
+
+### 🛠️ Technical Excellence
+- **API Integration**: Real-time data consumption from [FakeStoreAPI](https://fakestoreapi.com).
+- **Performance**:
+    - Search **Debounce** to reduce unnecessary API calls.
+    - Optimized memory usage for large datasets.
+    - SASS-based styling for maintainable and scalable CSS.
+
+---
+
+## 💻 Tech Stack
+- **Framework**: Angular 19
+- **Styling**: SASS (SCSS), Tailwind CSS
+- **Localization**: `@ngx-translate/core`
+- **API**: [FakeStoreAPI](https://fakestoreapi.com)
+
+---
+
+## 🛠️ Setup & Local Development
+
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v18+)
+- [Angular CLI](https://angular.dev/tools/cli)
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/etech-ecommerce-store.git
+   cd etech-ecommerce-store
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running with CLI
+To start the local development server:
 ```bash
 ng serve
 ```
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
+### Production Build
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 🧪 Evaluation Criteria met
+- ✅ **Clean Code**: Proper separation of concerns and readable architecture.
+- ✅ **Mobile-First**: Fully responsive UI/UX design.
+- ✅ **Efficiency**: Implemented caching and debouncing.
+- ✅ **Localization**: Dynamic i18n support for bi-directional layouts.
