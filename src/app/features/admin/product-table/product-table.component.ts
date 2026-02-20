@@ -2,6 +2,7 @@ import { Component, inject, signal, computed, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { debounceTime } from 'rxjs';
+import { trigger, transition, style, animate } from '@angular/animations';
 import { Product } from '../../../core/models/product.model';
 import { ProductService } from '../../../core/services/product.service';
 import { LoadingService } from '../../../core/services/loading.service';
@@ -13,6 +14,26 @@ import { ProductFormComponent } from '../product-form/product-form.component';
   standalone: true,
   imports: [TranslateModule, PaginationComponent, ProductFormComponent],
   templateUrl: './product-table.component.html',
+  animations: [
+    trigger('modalOverlay', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('300ms ease-out', style({ opacity: 1 }))
+      ]),
+      transition(':leave', [
+        animate('200ms ease-in', style({ opacity: 0 }))
+      ])
+    ]),
+    trigger('modalContent', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'scale(0.95) translateY(10px)' }),
+        animate('300ms cubic-bezier(0.16, 1, 0.3, 1)', style({ opacity: 1, transform: 'scale(1) translateY(0)' }))
+      ]),
+      transition(':leave', [
+        animate('200ms ease-in', style({ opacity: 0, transform: 'scale(0.95) translateY(10px)' }))
+      ])
+    ])
+  ]
 })
 export class ProductTableComponent implements OnInit {
   private readonly productService = inject(ProductService);
