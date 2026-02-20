@@ -48,7 +48,7 @@ The application supports two primary roles. Unauthorized access to role-specific
     - **Reactive UI**: Leveraging **Angular Signals** for granular reactivity and performance.
     - Smooth **Loading Animations** during data fetching.
 
-### 🛒 Bonus Feature: Shopping Cart & Wishlist
+### 🛒 Bonus Feature: Shopping Cart
 - **State Management**: fully responsive cart using *Angular Signals* (`CartService`).
 - **Interactive Cart UI**: Adjust item quantities, remove items, or move them to a simulated wishlist.
 - **Fake Checkout Flow**: Real-time order summary calculation and a mock checkout action.

@@ -47,9 +47,7 @@ export class CartService {
   }
 
   moveToWishlist(productId: number): void {
-    // In a real app we would have a WishlistService. For logic we will just remove from cart.
     this.removeFromCart(productId);
-    // TODO: implement actual wishlist if scope expands.
   }
 
   clearCart(): void {
