@@ -15,19 +15,21 @@
       <div class="flex items-center gap-3 relative">
 
         <!-- Cart -->
-        <button (click)="goToCart()"
-          class="w-full rounded-md text-left px-4 py-3 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors flex items-center justify-between">
-          <div class="flex items-center gap-2">
-            <span class="icon-shopping-cart"></span>
-            {{ 'navbar.cart' | translate }}
-          </div>
-          @if (cartService.cartItemCount() > 0) {
-          <span
-            class="bg-red-500 relative -top-[8px] text-white text-[10px] font-bold px-2 py-0.5 rounded-full inline-block">
-            {{ cartService.cartItemCount() }}
-          </span>
-          }
-        </button>
+        @if (authService.currentUser()?.role !== 'admin') {
+          <button (click)="goToCart()"
+            class="w-full rounded-md text-left px-4 py-3 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="icon-shopping-cart"></span>
+              {{ 'navbar.cart' | translate }}
+            </div>
+            @if (cartService.cartItemCount() > 0) {
+            <span
+              class="bg-red-500 relative -top-[8px] text-white text-[10px] font-bold px-2 py-0.5 rounded-full inline-block">
+              {{ cartService.cartItemCount() }}
+            </span>
+            }
+          </button>
+        }
 
 
         <!-- User Dropdown Toggle -->
