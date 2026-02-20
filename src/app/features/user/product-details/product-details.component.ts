@@ -4,6 +4,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { Product } from '../../../core/models/product.model';
 import { ProductService } from '../../../core/services/product.service';
 import { NavbarComponent } from '../../../shared/components/navbar/navbar.component';
+import { CartService } from '../../../core/services/cart.service';
 
 @Component({
   selector: 'app-product-details',
@@ -14,6 +15,7 @@ import { NavbarComponent } from '../../../shared/components/navbar/navbar.compon
 export class ProductDetailsComponent implements OnInit {
   private readonly route = inject(ActivatedRoute);
   private readonly productService = inject(ProductService);
+  readonly cartService = inject(CartService);
 
   readonly product = signal<Product | null>(null);
   readonly isLoading = signal(true);
@@ -34,6 +36,14 @@ export class ProductDetailsComponent implements OnInit {
   getStars(rate: number): boolean[] {
     return Array.from({ length: 5 }, (_, i) => i < Math.round(rate));
   }
+
+  addToCart(): void {
+    const currentProduct = this.product();
+    if (currentProduct) {
+      this.cartService.addToCart(currentProduct);
+    }
+  }
 }
+
 
 

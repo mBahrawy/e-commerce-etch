@@ -48,6 +48,12 @@ The application supports two primary roles. Unauthorized access to role-specific
     - **Reactive UI**: Leveraging **Angular Signals** for granular reactivity and performance.
     - Smooth **Loading Animations** during data fetching.
 
+### 🛒 Bonus Feature: Shopping Cart & Wishlist
+- **State Management**: fully responsive cart using *Angular Signals* (`CartService`).
+- **Interactive Cart UI**: Adjust item quantities, remove items, or move them to a simulated wishlist.
+- **Fake Checkout Flow**: Real-time order summary calculation and a mock checkout action.
+- **Integrated UX**: "Add to Cart" functions on products alongside a live badge indicator in the Navigation Menu.
+
 ### 🌍 Localization
 - Supports **English** and **Arabic** out-of-the-box using **ngx-translate**.
 - Dynamic RTL (Right-to-Left) support for Arabic.
@@ -55,7 +61,7 @@ The application supports two primary roles. Unauthorized access to role-specific
 
 ### 🎨 Modern UI/UX
 - Styled with **Tailwind CSS** for a modern, utility-first design approach.
-- Responsive and mobile-friendly layouts.
+- Responsive and mobile-friendly layouts, including a reactive Navbar with a User Profile dropdown (Cart, Language Switcher, Logout).
 - Custom SASS for complex component-specific styles.
 
 ### 🛠️ Technical Excellence

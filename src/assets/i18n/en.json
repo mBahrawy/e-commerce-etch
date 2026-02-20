@@ -12,7 +12,10 @@
     "fill_all_fields": "Please fill in all fields"
   },
   "navbar": {
-    "logout": "Logout"
+    "logout": "Logout",
+    "profile": "Profile",
+    "cart": "Cart",
+    "language": "العربية"
   },
   "admin": {
     "title": "Product Management",
@@ -67,5 +70,23 @@
     "women's clothing": "Women's Clothing",
     "electronics": "Electronics",
     "jewelery": "Jewelery"
+  },
+  "cart": {
+    "title": "Your Cart",
+    "continue_shopping": "Continue Shopping",
+    "empty_title": "Your cart is empty",
+    "empty_message": "Looks like you haven't added anything to your cart yet.",
+    "browse_products": "Browse Products",
+    "remove": "Remove",
+    "move_to_wishlist": "Move to Wishlist",
+    "order_summary": "Order Summary",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "free": "Free",
+    "total": "Total",
+    "checkout": "Proceed to Checkout",
+    "secure_checkout": "Secure Checkout",
+    "add_to_cart": "Add to Cart"
   }
 }
+

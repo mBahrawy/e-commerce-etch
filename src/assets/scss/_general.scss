@@ -26,12 +26,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #d1d5db;
+  background: var(--color-purple-500, #8b5cf6);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #9ca3af;
+  background: var(--color-purple-600, #7c3aed);
 }
 
 /* Line Clamp Utility */
@@ -72,4 +72,8 @@ body {
 
 .animate-shake {
   animation: shake 0.3s ease-in-out;
+}
+
+button {
+  cursor: pointer;
 }

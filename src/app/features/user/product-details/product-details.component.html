@@ -57,10 +57,15 @@
             </div>
 
             <!-- Price -->
-            <div class="mb-8">
+            <div class="mb-8 flex flex-col sm:flex-row sm:items-center gap-4">
               <span class="text-4xl font-bold text-purple-600">
                 ${{ product()!.price.toFixed(2) }}
               </span>
+              <button (click)="addToCart()"
+                class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-semibold transition-all duration-200 shadow-lg shadow-purple-200 flex items-center justify-center gap-2 group">
+                <span class="icon-shopping-cart relative transition-transform group-hover:-translate-y-0.5"></span>
+                {{ 'cart.add_to_cart' | translate }}
+              </button>
             </div>
 
             <!-- Description -->

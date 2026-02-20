@@ -12,7 +12,10 @@
     "fill_all_fields": "يرجى تعبئة جميع الحقول"
   },
   "navbar": {
-    "logout": "تسجيل الخروج"
+    "logout": "تسجيل الخروج",
+    "profile": "الملف الشخصي",
+    "cart": "عربة التسوق",
+    "language": "English"
   },
   "admin": {
     "title": "إدارة المنتجات",
@@ -67,5 +70,22 @@
     "women's clothing": "ملابس نسائية",
     "electronics": "إلكترونيات",
     "jewelery": "مجوهرات"
+  },
+  "cart": {
+    "title": "سلة المشتريات",
+    "continue_shopping": "مواصلة التسوق",
+    "empty_title": "سلة المشتريات فارغة",
+    "empty_message": "يبدو أنك لم تضف أي منتجات إلى سلة مشترياتك بعد.",
+    "browse_products": "تصفح المنتجات",
+    "remove": "إزالة",
+    "move_to_wishlist": "نقل إلى المفضلة",
+    "order_summary": "ملخص الطلب",
+    "subtotal": "المجموع الفرعي",
+    "shipping": "الشحن",
+    "free": "مجاني",
+    "total": "الإجمالي",
+    "checkout": "متابعة الدفع",
+    "secure_checkout": "دفع آمن",
+    "add_to_cart": "أضف إلى السلة"
   }
 }

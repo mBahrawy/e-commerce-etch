@@ -25,5 +25,10 @@ export const routes: Routes = [
     loadComponent: () => import('./features/user/product-details/product-details.component').then(m => m.ProductDetailsComponent),
     canActivate: [authGuard],
   },
+  {
+    path: 'cart',
+    loadComponent: () => import('./features/user/cart/cart.component').then(m => m.CartComponent),
+    canActivate: [authGuard],
+  },
   { path: '**', redirectTo: 'login' },
 ];
