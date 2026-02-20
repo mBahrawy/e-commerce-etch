@@ -14,6 +14,7 @@ import { inject } from '@angular/core';
 export class ProductCardComponent {
   readonly product = input.required<Product>();
   readonly cartService = inject(CartService);
+  isAdded = false;
 
   getStars(rate: number): boolean[] {
     return Array.from({ length: 5 }, (_, i) => i < Math.round(rate));
@@ -22,7 +23,13 @@ export class ProductCardComponent {
   addToCart(event: Event): void {
     event.stopPropagation();
     event.preventDefault();
+    if (this.isAdded) return;
+    
     this.cartService.addToCart(this.product());
+    this.isAdded = true;
+    setTimeout(() => {
+      this.isAdded = false;
+    }, 1500);
   }
 }
 

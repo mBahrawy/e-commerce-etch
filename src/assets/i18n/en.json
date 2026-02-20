@@ -86,7 +86,8 @@
     "total": "Total",
     "checkout": "Proceed to Checkout",
     "secure_checkout": "Secure Checkout",
-    "add_to_cart": "Add to Cart"
+    "add_to_cart": "Add to Cart",
+    "added": "Added to Cart"
   }
 }
 

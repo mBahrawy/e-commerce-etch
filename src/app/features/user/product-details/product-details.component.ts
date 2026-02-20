@@ -19,6 +19,7 @@ export class ProductDetailsComponent implements OnInit {
 
   readonly product = signal<Product | null>(null);
   readonly isLoading = signal(true);
+  isAdded = false;
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
@@ -38,9 +39,14 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   addToCart(): void {
+    if (this.isAdded) return;
     const currentProduct = this.product();
     if (currentProduct) {
       this.cartService.addToCart(currentProduct);
+      this.isAdded = true;
+      setTimeout(() => {
+        this.isAdded = false;
+      }, 1500);
     }
   }
 }

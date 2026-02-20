@@ -62,9 +62,15 @@
                 ${{ product()!.price.toFixed(2) }}
               </span>
               <button (click)="addToCart()"
-                class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-semibold transition-all duration-200 shadow-lg shadow-purple-200 flex items-center justify-center gap-2 group">
-                <span class="icon-shopping-cart relative transition-transform group-hover:-translate-y-0.5"></span>
-                {{ 'cart.add_to_cart' | translate }}
+                [class]="isAdded ? 'bg-green-500 hover:bg-green-600 shadow-green-200' : 'bg-purple-600 hover:bg-purple-700 shadow-purple-200'"
+                class="w-full sm:w-auto px-8 py-3.5 rounded-xl text-white font-semibold transition-all duration-200 shadow-lg flex items-center justify-center gap-2 group min-w-[200px]">
+                @if (isAdded) {
+                  <span class="icon-check text-xl"></span>
+                  {{ 'cart.added' | translate }}
+                } @else {
+                  <span class="icon-shopping-cart relative transition-transform group-hover:-translate-y-0.5"></span>
+                  {{ 'cart.add_to_cart' | translate }}
+                }
               </button>
             </div>
 

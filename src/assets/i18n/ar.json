@@ -86,6 +86,7 @@
     "total": "الإجمالي",
     "checkout": "متابعة الدفع",
     "secure_checkout": "دفع آمن",
-    "add_to_cart": "أضف إلى السلة"
+    "add_to_cart": "أضف إلى السلة",
+    "added": "تمت الإضافة"
   }
 }
