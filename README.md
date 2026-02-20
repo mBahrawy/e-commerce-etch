@@ -1,14 +1,14 @@
 # E-Tech E-Commerce Store
 
 [![Angular](https://img.shields.io/badge/Angular-v19+-DD0031?style=flat&logo=angular)](https://angular.io/)
-[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=flat&logo=link)](https://etech-store123.com)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=flat&logo=link)](https://e-commerce-etech.netlify.app/)
 
 A professional, feature-rich e-commerce store application built with Angular 19. This project was developed as a technical assessment for **E-Tech**.
 
 ---
 
 ## 🚀 Live Demo
-Experience the application live at: **[https://etech-store123.com](https://etech-store123.com)**
+Experience the application live at: **[https://e-commerce-etech.netlify.app/](https://e-commerce-etech.netlify.app/)**
 
 ---
 
@@ -54,6 +54,11 @@ The application supports two primary roles. Unauthorized access to role-specific
 - **Fake Checkout Flow**: Real-time order summary calculation and a mock checkout action.
 - **Integrated UX**: "Add to Cart" functions on products alongside a live badge indicator in the Navigation Menu.
 
+### 🧪 Bonus Feature: Unit Testing (Product CRUD)
+- Added 6 comprehensive unit test cases for the `ProductService`.
+- Tests cover `getProducts`, `getProduct`, `addProduct`, `updateProduct`, `deleteProduct`, and **Caching Behavior**.
+- Tests were implemented using Angular's `HttpTestingController` to mock API responses and verify HTTP requests.
+
 ### 🌍 Localization
 - Supports **English** and **Arabic** out-of-the-box using **ngx-translate**.
 - Dynamic RTL (Right-to-Left) support for Arabic.
@@ -65,7 +70,7 @@ The application supports two primary roles. Unauthorized access to role-specific
 - Custom SASS for complex component-specific styles.
 
 ### 🛠️ Technical Excellence
-- **API Integration**: Real-time data consumption from [FakeStoreAPI](https://fakestoreapi.com).
+- **API Integration**: Real-time data consumption using [FakeStoreAPI](https://fakestoreapi.com/) for API calls.
 - **Performance**:
     - Search **Debounce** to reduce unnecessary API calls.
     - Optimized memory usage for large datasets.
@@ -104,6 +109,12 @@ To start the local development server:
 ng serve
 ```
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+### Running Unit Tests
+To execute the unit tests, verify functionality, and see the results for the `ProductService`, run:
+```bash
+ng test
+```
 
 ### Production Build
 ```bash
