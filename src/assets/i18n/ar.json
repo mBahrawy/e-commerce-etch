@@ -58,6 +58,14 @@
     "cancel": "إلغاء",
     "save": "حفظ",
     "delete": "حذف",
-    "loading": "جاري التحميل..."
+    "loading": "جاري التحميل...",
+    "user": "مستخدم",
+    "admin": "مدير"
+  },
+  "categories": {
+    "men's clothing": "ملابس رجالية",
+    "women's clothing": "ملابس نسائية",
+    "electronics": "إلكترونيات",
+    "jewelery": "مجوهرات"
   }
 }

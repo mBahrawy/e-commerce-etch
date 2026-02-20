@@ -58,6 +58,14 @@
     "cancel": "Cancel",
     "save": "Save",
     "delete": "Delete",
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "user": "User",
+    "admin": "Admin"
+  },
+  "categories": {
+    "men's clothing": "Men's Clothing",
+    "women's clothing": "Women's Clothing",
+    "electronics": "Electronics",
+    "jewelery": "Jewelery"
   }
 }

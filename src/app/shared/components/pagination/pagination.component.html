@@ -4,9 +4,7 @@
     (click)="onPageChange(currentPage() - 1)"
     [disabled]="currentPage() === 1"
     class="px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed bg-white border border-gray-200 hover:bg-gray-50 hover:border-gray-300 shadow-sm">
-    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-    </svg>
+    <span class="icon-chevron-right flex items-center justify-center min-h-[20px] ltr:rotate-180 w-4 h-4 transition-transform group-hover:-translate-x-1"></span>
   </button>
 
   <!-- Page Numbers -->
@@ -23,15 +21,12 @@
       </button>
     }
   }
-
   <!-- Next -->
   <button
     (click)="onPageChange(currentPage() + 1)"
     [disabled]="currentPage() === totalPages()"
     class="px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed bg-white border border-gray-200 hover:bg-gray-50 hover:border-gray-300 shadow-sm">
-    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-    </svg>
+    <span class="icon-chevron-right flex items-center justify-center min-h-[20px] rtl:rotate-180 w-4 h-4 transition-transform group-hover:-translate-x-1"></span>
   </button>
 </div>
 

@@ -10,9 +10,7 @@
     </div>
 
     <!-- Category Filter -->
-    <app-category-list
-      [categories]="categories()"
-      [selectedCategory]="selectedCategory()"
+    <app-category-list [categories]="categories()" [selectedCategory]="selectedCategory()"
       (categorySelect)="onCategorySelect($event)" />
 
     <!-- Product Count -->
@@ -24,33 +22,29 @@
 
     <!-- Products Grid -->
     @if (isLoadingProducts()) {
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        @for (i of skeletonItems; track i) {
-          <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden animate-pulse">
-            <div class="h-52 bg-gray-200"></div>
-            <div class="p-5 space-y-3">
-              <div class="h-4 bg-gray-200 rounded w-3/4"></div>
-              <div class="h-3 bg-gray-200 rounded w-1/2"></div>
-              <div class="h-8 bg-gray-200 rounded w-1/3 mt-4"></div>
-            </div>
-          </div>
-        }
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      @for (i of skeletonItems; track i) {
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden animate-pulse">
+        <div class="h-52 bg-gray-200"></div>
+        <div class="p-5 space-y-3">
+          <div class="h-4 bg-gray-200 rounded w-3/4"></div>
+          <div class="h-3 bg-gray-200 rounded w-1/2"></div>
+          <div class="h-8 bg-gray-200 rounded w-1/3 mt-4"></div>
+        </div>
       </div>
+      }
+    </div>
     } @else {
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        @for (product of displayProducts(); track product.id) {
-          <app-product-card [product]="product" />
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      @for (product of displayProducts(); track product.id) {
+      <app-product-card class="flex" [product]="product" />
         } @empty {
-          <div class="col-span-full py-16 text-center">
-            <svg class="w-16 h-16 mx-auto mb-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/>
-            </svg>
-            <p class="text-gray-400 text-lg">{{ 'user.no_products' | translate }}</p>
-          </div>
-        }
+      <div class="col-span-full py-16 text-center">
+        <span class="icon-inbox text-6xl text-gray-300"></span>
+        <p class="text-gray-400 text-lg">{{ 'user.no_products' | translate }}</p>
       </div>
+      }
+    </div>
     }
   </main>
 </div>
-
-
